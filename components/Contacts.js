@@ -3,10 +3,10 @@ let Contacts = React.createClass({
 
     render: function(){
         let contacts = this.props.items.map((contact)=>{
-            return React.createElement(Contact, {item: contact, key: contact.id});
+            return (<Contact item={contact} key={contact.id}/>);
         });
 
-        return React.createElement('ul', {className: 'contactList'}, contacts);
+        return (<ul className={'contactList'}>{contacts}</ul>)
     },
 
     propTypes: {
